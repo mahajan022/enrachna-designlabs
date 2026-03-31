@@ -10,18 +10,21 @@ const slides = [
     sub: "End-to-end product design and engineering — from concept to launch, entirely under one roof.",
     tag: "Industrial Design · Engineering · Mumbai",
     bg: "from-[#0a0a0a] to-[#1a1a2e]",
+    img: "/hero-1.jpg",
   },
   {
     title: "From Sketch to Shelf — We Handle Every Step",
     sub: "Our integrated team eliminates the fragmentation of working with multiple agencies.",
     tag: "Full-Spectrum Product Studio",
     bg: "from-[#111111] to-[#0a0a0a]",
+    img: "/hero-2.jpg",
   },
   {
     title: "Innovation-First. Always.",
     sub: "We pursue industry-first features in every project — not just what works, but what stands apart.",
     tag: "Discipline · Integrity · Teamwork",
     bg: "from-[#1a1a2e] to-[#111111]",
+    img: "/hero-3.jpg",
   },
 ];
 
@@ -46,8 +49,8 @@ const whyPoints = [
 const IMG_PH = ({ label = "" }: { label?: string }) => (
   <div className="w-full aspect-[4/3] bg-[#f4f6f9] border-2 border-dashed border-[#dde2eb] rounded-xl flex flex-col items-center justify-center gap-3 text-[#9aa4b5]">
     <svg className="opacity-30" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-      <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-      <polyline points="21 15 16 10 5 21"/>
+      <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" />
+      <polyline points="21 15 16 10 5 21" />
     </svg>
     <span className="text-[0.68rem] tracking-wide text-center px-8">📌 {label}</span>
   </div>
@@ -72,9 +75,10 @@ export default function HomePage() {
         {slides.map((s, i) => (
           <div
             key={i}
-            className={`absolute inset-0 bg-gradient-to-br ${s.bg} transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
+            className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
           >
-            <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
+            <img src={s.img} alt="" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black/55" />
           </div>
         ))}
 
@@ -219,7 +223,7 @@ export default function HomePage() {
                 className="group block bg-white border border-[#dde2eb] hover:border-[#1a2535]/30 hover:shadow-lg rounded-xl overflow-hidden transition-all duration-200">
                 <div className="aspect-video bg-[#eef1f6] flex flex-col items-center justify-center gap-2 text-[#9aa4b5]">
                   <svg className="opacity-30" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-                    <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+                    <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" />
                   </svg>
                   <span className="text-[0.6rem] tracking-widest">📌 Add project image</span>
                 </div>
@@ -263,8 +267,8 @@ export default function HomePage() {
           <div>
             <div className="aspect-[4/3] bg-[#1a1a1a] border border-white/10 rounded-xl flex flex-col items-center justify-center gap-3 text-white/20">
               <svg className="opacity-40" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
+                <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
               </svg>
               <span className="text-[0.68rem] tracking-wide text-center px-8">📌 Add office/team photo (800×600px)</span>
             </div>
