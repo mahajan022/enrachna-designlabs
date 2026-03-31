@@ -1,30 +1,28 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import { ArrowRight, ChevronRight, ChevronLeft, Layers, Cpu, Box, Settings, RotateCcw, Package, Users } from "lucide-react";
 
 /* ── CAROUSEL DATA ── */
-const slides = [
+const slides: { title: string; sub: string; tag: string; img: string }[] = [
   {
     title: "Crafting Products That Define Their Industries",
     sub: "End-to-end product design and engineering — from concept to launch, entirely under one roof.",
     tag: "Industrial Design · Engineering · Mumbai",
-    bg: "from-[#0a0a0a] to-[#1a1a2e]",
-    img: "/hero-1.jpg",
+    img: "/hero-1.png",
   },
   {
     title: "From Sketch to Shelf — We Handle Every Step",
     sub: "Our integrated team eliminates the fragmentation of working with multiple agencies.",
     tag: "Full-Spectrum Product Studio",
-    bg: "from-[#111111] to-[#0a0a0a]",
-    img: "/hero-2.jpg",
+    img: "/hero-2.png",
   },
   {
     title: "Innovation-First. Always.",
     sub: "We pursue industry-first features in every project — not just what works, but what stands apart.",
     tag: "Discipline · Integrity · Teamwork",
-    bg: "from-[#1a1a2e] to-[#111111]",
-    img: "/hero-3.jpg",
+    img: "/hero-3.png",
   },
 ];
 
@@ -77,7 +75,14 @@ export default function HomePage() {
             key={i}
             className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
           >
-            <img src={s.img} alt="" className="w-full h-full object-cover" />
+            <Image
+              src={s.img}
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover"
+              priority={i === 0}
+            />
             <div className="absolute inset-0 bg-black/55" />
           </div>
         ))}
@@ -260,7 +265,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── GET IN TOUCH (inline like EDL reference) ── */}
+      {/* ── GET IN TOUCH ── */}
       <section className="bg-[#111111] py-24 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
           {/* Left */}
