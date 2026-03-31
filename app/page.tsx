@@ -132,9 +132,6 @@ export default function HomePage() {
             <ChevronRight size={16} />
           </button>
         </div>
-
-        {String(current + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
-
       </section>
 
       {/* ── WHO WE ARE ── */}
