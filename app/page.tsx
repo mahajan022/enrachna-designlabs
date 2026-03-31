@@ -83,7 +83,7 @@ export default function HomePage() {
               className="object-cover"
               priority={i === 0}
             />
-            <div className="absolute inset-0 bg-black/55" />
+            <div className="absolute inset-0 bg-black/68" />
           </div>
         ))}
 
@@ -132,9 +132,9 @@ export default function HomePage() {
             <ChevronRight size={16} />
           </button>
         </div>
-        <div className="absolute bottom-9 right-6 lg:right-10 z-20 text-white/40 text-[0.72rem] font-500 font-display">
-          {String(current + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
-        </div>
+
+        {String(current + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
+
       </section>
 
       {/* ── WHO WE ARE ── */}
