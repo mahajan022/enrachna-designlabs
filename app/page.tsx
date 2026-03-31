@@ -153,7 +153,14 @@ export default function HomePage() {
             </Link>
           </div>
           <div>
-            <IMG_PH label="Add your studio / team photo here (800×600px)" />
+            <Image
+              src="/studio-team.png"
+              alt="Enrachna Design Labs Studio"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover rounded-xl"
+            />
+
           </div>
         </div>
       </section>
