@@ -273,14 +273,14 @@ export default function HomePage() {
       <section className="bg-[#111111] py-24 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
           {/* Left */}
-          <div>
-            <div className="aspect-[4/3] bg-[#1a1a1a] border border-white/10 rounded-xl flex flex-col items-center justify-center gap-3 text-white/20">
-              <svg className="opacity-40" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" />
-                <polyline points="21 15 16 10 5 21" />
-              </svg>
-              <span className="text-[0.68rem] tracking-wide text-center px-8">📌 Add office/team photo (800×600px)</span>
-            </div>
+          <div className="rounded-xl overflow-hidden">
+            <Image
+              src="/office-contact.jpg"
+              alt="Enrachna Office"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover rounded-xl"
+            />
           </div>
           {/* Right — form */}
           <div>
