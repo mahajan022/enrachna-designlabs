@@ -275,7 +275,7 @@ export default function HomePage() {
           {/* Left */}
           <div className="rounded-xl overflow-hidden">
             <Image
-              src="/office-contact.jpg"
+              src="/office-contact.png"
               alt="Enrachna Office"
               width={800}
               height={600}
