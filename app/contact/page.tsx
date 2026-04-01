@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Phone, Mail, Globe, MapPin } from "lucide-react";
-
+import Image from "next/image";
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
 
@@ -31,13 +31,13 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-start">
           {/* Left — office image placeholder */}
           <div className="rounded-xl overflow-hidden">
-            <div className="aspect-[4/3] bg-[#f4f6f9] border-2 border-dashed border-[#dde2eb] rounded-xl flex flex-col items-center justify-center gap-3 text-[#9aa4b5]">
-              <svg className="opacity-40" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-              <span className="text-[0.68rem] tracking-wide text-center px-8">📌 Add contact/office photo (800×600px)</span>
-            </div>
+            <Image
+              src="/office-contact.png"
+              alt="Enrachna Office"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover rounded-xl"
+            />
           </div>
 
           {/* Right form */}
