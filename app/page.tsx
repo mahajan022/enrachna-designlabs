@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
-import { ArrowRight, ChevronRight, ChevronLeft, Layers, Cpu, Box, Settings, RotateCcw, Package, Users } from "lucide-react";
+import { ArrowRight, ChevronRight, ChevronLeft, Layers, Cpu, Box, Settings, RotateCcw, Package, Users, icons } from "lucide-react";
 
 /* ── CAROUSEL DATA ── */
 const slides: { title: string; sub: string; tag: string; img: string }[] = [
@@ -176,12 +176,12 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap items-center gap-6 mb-8">
             {[
-              { label: "Customer Desirability", icon: "👤" },
-              { label: "Technical Feasibility", icon: "⚙️" },
-              { label: "Business Viability", icon: "📊" },
+              { label: "Customer Desirability", icon: "/icons/customer.svg" },
+              { label: "Technical Feasibility", icon: "/icons/technology.svg" },
+              { label: "Business Viability", icon: "/icons/business.svg" },
             ].map((f) => (
               <div key={f.label} className="flex items-center gap-3 bg-white border border-[#dde2eb] rounded-xl px-6 py-4">
-                <span className="text-2xl">{f.icon}</span>
+                <Image src={f.icon} alt={f.label} width={40} height={40} />
                 <span className="font-600 text-[0.9rem] text-[#1a2535]">{f.label}</span>
               </div>
             ))}
