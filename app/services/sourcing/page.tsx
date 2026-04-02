@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
@@ -21,9 +22,9 @@ export default function Page() {
           <span className="text-[0.6rem] tracking-[0.28em] uppercase text-white/50 font-medium">Services</span>
           <div className="w-10 h-[1px] bg-white/30 mt-3 mb-5" />
           <h1 className="font-display text-[clamp(2.2rem,4vw,3.6rem)] font-medium text-white leading-[1.15] max-w-[600px]">
-            Precision Geometry,<br />Perfectly Realised
+            Strategic Supply Chains That Deliver
           </h1>
-          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[500px] mt-5">From detailed 2D drawings to fully parametric 3D models — accurate digital geometry ready for engineering validation and manufacture.</p>
+          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[500px] mt-5">Developing reliable, cost-effective supply chains has been one of our core strengths since day one.</p>
         </div>
       </div>
 
@@ -33,15 +34,14 @@ export default function Page() {
           <div>
             <span className="text-[0.6rem] tracking-[0.28em] uppercase text-[#1a2535] font-medium">Overview</span>
             <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
-            <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-[#1a2535] leading-tight mb-6">2D / 3D CAD Modelling</h2>
-            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">Accurate CAD modelling is the backbone of any product development process. Our team works with industry-standard tools to produce clean, well-structured models that integrate seamlessly with downstream engineering, tooling, and production workflows.</p>
+            <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-[#1a2535] leading-tight mb-6">Sourcing</h2>
+            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">Developing strategic supply chains is one of the core strengths and areas of focus at Enrachna Design Labs. We leverage our network of vetted manufacturers and suppliers to find the right partners for your product — balancing quality, cost, lead time, and reliability to build supply chains that scale with your business.</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#111111] hover:bg-[#333333] text-white px-7 py-3 text-[0.72rem] tracking-[0.12em] uppercase font-medium transition-colors rounded-lg">
               Enquire About This Service <ArrowRight size={14} />
             </Link>
           </div>
           <div className="relative">
-            <IMG_PH label="3D CAD model in progress (800×600px)" cls="aspect-[4/3]" />
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-2 border-[#222222]/20 -z-10" />
+            <IMG_PH label="Add service image here (800×600px)" cls="aspect-[4/3]" />
           </div>
         </div>
       </section>
@@ -54,15 +54,16 @@ export default function Page() {
             <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
             <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium text-[#1a2535] leading-tight mb-8">Scope of Work</h2>
             <ul className="flex flex-col gap-3">
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Parametric 3D solid and surface modelling</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Complex freeform surface modelling</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">2D technical drawings with full GD&T</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Assembly modelling and tolerance analysis</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">CAD data preparation for CNC and 3D printing</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">File conversion and legacy data migration</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Supplier identification and qualification</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">RFQ management and cost benchmarking</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Factory audits and capability assessment</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Sample evaluation and approval</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Supply chain risk assessment</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Negotiation support and contract review</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Ongoing supplier relationship management</span></li>
             </ul>
           </div>
-          <IMG_PH label="Technical 2D drawing (800×600px)" cls="aspect-[4/3]" />
+          <IMG_PH label="Add scope image here (800×600px)" cls="aspect-[4/3]" />
         </div>
       </section>
 
@@ -75,21 +76,22 @@ export default function Page() {
           <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-white leading-tight mb-5">
             Why Choose Enrachna for This Service
           </h2>
-          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[580px] mx-auto mb-10">Clean, well-structured CAD data prevents costly errors downstream. We build models right the first time — saving you revision cycles and tooling corrections later.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-[#f0f0f0] text-[#111111] text-white px-10 py-4 text-[0.75rem] tracking-[0.14em] uppercase font-medium transition-colors rounded-lg">
+          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[580px] mx-auto mb-10">Our sourcing team has built deep relationships with manufacturers across India and globally — giving you access to reliable supply chains that most companies take years to build.</p>
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-[#f0f0f0] text-[#111111] px-10 py-4 text-[0.75rem] tracking-[0.14em] uppercase font-medium transition-colors rounded-lg">
             Start a Conversation <ArrowRight size={14} />
           </Link>
         </div>
       </section>
+
       {/* OTHER SERVICES */}
       <section className="bg-[#111111] py-20 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-[clamp(1.8rem,2.5vw,2.4rem)] font-700 text-white mb-10">Other Services</h2>
           <div className="grid sm:grid-cols-3 gap-5">
-            {[
-              { href: "/services/industrial-design", label: "Industrial Product Design" },
-              { href: "/services/product-engineering", label: "Product Engineering" },
-              { href: "/services/prototyping", label: "Prototyping" },
+                        {[
+              { href: "/services/product-development", label: "Product Development" },
+              { href: "/services/product-testing-validation", label: "Product Testing & Validation" },
+              { href: "/services/project-management", label: "Project Management & Greenfield Projects" },
             ].map((s) => (
               <Link key={s.href} href={s.href} className="group block relative overflow-hidden rounded-lg">
                 <div className="aspect-[4/3] bg-[#1a1a1a] border border-white/10 rounded-lg overflow-hidden relative">

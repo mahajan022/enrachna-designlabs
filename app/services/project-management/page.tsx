@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
@@ -21,9 +22,9 @@ export default function Page() {
           <span className="text-[0.6rem] tracking-[0.28em] uppercase text-white/50 font-medium">Services</span>
           <div className="w-10 h-[1px] bg-white/30 mt-3 mb-5" />
           <h1 className="font-display text-[clamp(2.2rem,4vw,3.6rem)] font-medium text-white leading-[1.15] max-w-[600px]">
-            Understand, Recreate,<br />and Improve
+            End-to-End Project Ownership
           </h1>
-          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[500px] mt-5">Accurate recreation and enhancement of existing components using advanced scanning, measurement, and parametric modelling techniques.</p>
+          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[500px] mt-5">Full project management and greenfield project execution — we take complete ownership so you can focus on your business.</p>
         </div>
       </div>
 
@@ -33,15 +34,14 @@ export default function Page() {
           <div>
             <span className="text-[0.6rem] tracking-[0.28em] uppercase text-[#1a2535] font-medium">Overview</span>
             <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
-            <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-[#1a2535] leading-tight mb-6">Reverse Engineering</h2>
-            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">Whether you need to reproduce a legacy component with no documentation, understand a competitor's product, or improve an existing part, our reverse engineering service provides a reliable starting point for redesign and optimisation.</p>
+            <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-[#1a2535] leading-tight mb-6">Project Management & Greenfield Projects</h2>
+            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">For clients who need complete end-to-end ownership, Enrachna Design Labs acts as your fully integrated project team. From greenfield projects — where everything is built from scratch — to complex multi-stakeholder programmes, we provide disciplined project management that keeps timelines, budgets, and quality on track.</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#111111] hover:bg-[#333333] text-white px-7 py-3 text-[0.72rem] tracking-[0.12em] uppercase font-medium transition-colors rounded-lg">
               Enquire About This Service <ArrowRight size={14} />
             </Link>
           </div>
           <div className="relative">
-            <IMG_PH label="3D scanning in progress (800×600px)" cls="aspect-[4/3]" />
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-2 border-[#222222]/20 -z-10" />
+            <IMG_PH label="Add service image here (800×600px)" cls="aspect-[4/3]" />
           </div>
         </div>
       </section>
@@ -54,15 +54,16 @@ export default function Page() {
             <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
             <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium text-[#1a2535] leading-tight mb-8">Scope of Work</h2>
             <ul className="flex flex-col gap-3">
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">3D scanning and point cloud processing</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Precision measurement and dimensional inspection</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Parametric CAD reconstruction</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">As-built vs. design-intent comparison</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Legacy drawing creation from physical parts</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Component improvement and redesign</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Project scoping and feasibility assessment</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Full project planning and scheduling</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Cross-functional team coordination</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Budget management and cost control</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Risk identification and mitigation</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Greenfield facility and process setup</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Milestone tracking and stakeholder reporting</span></li>
             </ul>
           </div>
-          <IMG_PH label="Reconstructed CAD model (800×600px)" cls="aspect-[4/3]" />
+          <IMG_PH label="Add scope image here (800×600px)" cls="aspect-[4/3]" />
         </div>
       </section>
 
@@ -75,21 +76,22 @@ export default function Page() {
           <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-white leading-tight mb-5">
             Why Choose Enrachna for This Service
           </h2>
-          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[580px] mx-auto mb-10">We don't just recreate — we reconstruct with intelligence. Our engineers analyse the original intent behind every feature, ensuring the model is accurate and improvement-ready.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-[#f0f0f0] text-[#111111] text-white px-10 py-4 text-[0.75rem] tracking-[0.14em] uppercase font-medium transition-colors rounded-lg">
+          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[580px] mx-auto mb-10">We take complete ownership of your project — managing every moving part so you get a finished product on time, within budget, and to specification.</p>
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-[#f0f0f0] text-[#111111] px-10 py-4 text-[0.75rem] tracking-[0.14em] uppercase font-medium transition-colors rounded-lg">
             Start a Conversation <ArrowRight size={14} />
           </Link>
         </div>
       </section>
+
       {/* OTHER SERVICES */}
       <section className="bg-[#111111] py-20 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-[clamp(1.8rem,2.5vw,2.4rem)] font-700 text-white mb-10">Other Services</h2>
           <div className="grid sm:grid-cols-3 gap-5">
-            {[
-              { href: "/services/industrial-design", label: "Industrial Product Design" },
-              { href: "/services/product-engineering", label: "Product Engineering" },
-              { href: "/services/prototyping", label: "Prototyping" },
+                        {[
+              { href: "/services/product-strategy", label: "Product Strategy & Road Maps" },
+              { href: "/services/product-development", label: "Product Development" },
+              { href: "/services/sourcing", label: "Sourcing" },
             ].map((s) => (
               <Link key={s.href} href={s.href} className="group block relative overflow-hidden rounded-lg">
                 <div className="aspect-[4/3] bg-[#1a1a1a] border border-white/10 rounded-lg overflow-hidden relative">

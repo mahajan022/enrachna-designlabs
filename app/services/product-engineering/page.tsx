@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
@@ -21,7 +22,7 @@ export default function Page() {
           <span className="text-[0.6rem] tracking-[0.28em] uppercase text-white/50 font-medium">Services</span>
           <div className="w-10 h-[1px] bg-white/30 mt-3 mb-5" />
           <h1 className="font-display text-[clamp(2.2rem,4vw,3.6rem)] font-medium text-white leading-[1.15] max-w-[600px]">
-            Engineering That Ensures<br />Your Product Performs
+            Engineering That Ensures Your Product Performs
           </h1>
           <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[500px] mt-5">Rigorous structural analysis, material selection, and DFM reviews that transform a design into a product ready for real-world conditions.</p>
         </div>
@@ -34,14 +35,13 @@ export default function Page() {
             <span className="text-[0.6rem] tracking-[0.28em] uppercase text-[#1a2535] font-medium">Overview</span>
             <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
             <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-[#1a2535] leading-tight mb-6">Product Engineering</h2>
-            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">Beautiful design alone isn't enough — your product must also work reliably. Our product engineering service bridges the gap between design intent and manufacturable, testable reality.</p>
+            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">Beautiful design alone isn't enough — your product must also work reliably. Our product engineering service bridges the gap between design intent and manufacturable, testable reality. We apply rigorous analysis at every stage to ensure your product meets performance, safety, and cost targets.</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#111111] hover:bg-[#333333] text-white px-7 py-3 text-[0.72rem] tracking-[0.12em] uppercase font-medium transition-colors rounded-lg">
               Enquire About This Service <ArrowRight size={14} />
             </Link>
           </div>
           <div className="relative">
-            <IMG_PH label="FEA stress simulation screenshot (800×600px)" cls="aspect-[4/3]" />
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-2 border-[#222222]/20 -z-10" />
+            <IMG_PH label="Add service image here (800×600px)" cls="aspect-[4/3]" />
           </div>
         </div>
       </section>
@@ -54,15 +54,16 @@ export default function Page() {
             <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
             <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium text-[#1a2535] leading-tight mb-8">Scope of Work</h2>
             <ul className="flex flex-col gap-3">
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Finite Element Analysis (FEA) and stress simulation</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Design for Manufacture and Assembly (DFMA)</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Material selection and cost optimisation</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">BOM preparation and specification documentation</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Failure Mode and Effects Analysis (FMEA)</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Regulatory and standards compliance review</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Finite Element Analysis (FEA) and structural simulation</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Design for Manufacture and Assembly (DFM/DFA)</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Material selection and specification</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Tolerance analysis and GD&T</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Engineering drawings and BOM creation</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Failure mode analysis (FMEA)</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Prototype testing and validation support</span></li>
             </ul>
           </div>
-          <IMG_PH label="Engineering documentation (800×600px)" cls="aspect-[4/3]" />
+          <IMG_PH label="Add scope image here (800×600px)" cls="aspect-[4/3]" />
         </div>
       </section>
 
@@ -75,21 +76,22 @@ export default function Page() {
           <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-white leading-tight mb-5">
             Why Choose Enrachna for This Service
           </h2>
-          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[580px] mx-auto mb-10">We catch problems on screen — not on the factory floor. Our engineering rigour reduces costly redesigns and warranty issues before they happen.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-[#f0f0f0] text-[#111111] text-white px-10 py-4 text-[0.75rem] tracking-[0.14em] uppercase font-medium transition-colors rounded-lg">
+          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[580px] mx-auto mb-10">Our engineers combine analytical rigour with practical manufacturing knowledge — catching issues before they reach tooling and saving you significant time and cost.</p>
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-[#f0f0f0] text-[#111111] px-10 py-4 text-[0.75rem] tracking-[0.14em] uppercase font-medium transition-colors rounded-lg">
             Start a Conversation <ArrowRight size={14} />
           </Link>
         </div>
       </section>
+
       {/* OTHER SERVICES */}
       <section className="bg-[#111111] py-20 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-[clamp(1.8rem,2.5vw,2.4rem)] font-700 text-white mb-10">Other Services</h2>
           <div className="grid sm:grid-cols-3 gap-5">
-            {[
-              { href: "/services/industrial-design", label: "Industrial Product Design" },
-              { href: "/services/product-engineering", label: "Product Engineering" },
-              { href: "/services/prototyping", label: "Prototyping" },
+                        {[
+              { href: "/services/conceptualisation-industrial-design", label: "Conceptualisation & Industrial Design" },
+              { href: "/services/product-development", label: "Product Development" },
+              { href: "/services/product-testing-validation", label: "Product Testing & Validation" },
             ].map((s) => (
               <Link key={s.href} href={s.href} className="group block relative overflow-hidden rounded-lg">
                 <div className="aspect-[4/3] bg-[#1a1a1a] border border-white/10 rounded-lg overflow-hidden relative">

@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
@@ -21,9 +22,9 @@ export default function Page() {
           <span className="text-[0.6rem] tracking-[0.28em] uppercase text-white/50 font-medium">Services</span>
           <div className="w-10 h-[1px] bg-white/30 mt-3 mb-5" />
           <h1 className="font-display text-[clamp(2.2rem,4vw,3.6rem)] font-medium text-white leading-[1.15] max-w-[600px]">
-            Design That Captivates<br />and Performs
+            Innovation That Sets You Apart
           </h1>
-          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[500px] mt-5">Human-centred industrial design balancing aesthetic appeal, ergonomics, and manufacturability — from the very first sketch.</p>
+          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[500px] mt-5">We pursue industry-first features and breakthrough ideas that give your product a genuine competitive edge in the market.</p>
         </div>
       </div>
 
@@ -33,15 +34,14 @@ export default function Page() {
           <div>
             <span className="text-[0.6rem] tracking-[0.28em] uppercase text-[#1a2535] font-medium">Overview</span>
             <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
-            <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-[#1a2535] leading-tight mb-6">Industrial Product Design</h2>
-            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">Industrial product design is the foundation of every successful physical product. At Enrachna Design Labs, we combine human-centred thinking with deep manufacturing knowledge to create products users love and factories can build efficiently.</p>
+            <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-[#1a2535] leading-tight mb-6">Innovation & Industry First Features</h2>
+            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">Differentiation is in our DNA. At Enrachna Design Labs, we actively research and develop industry-first features for every project. We invest hundreds of hours exploring what's possible — not just what already exists — so your product stands out the moment it hits the market.</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#111111] hover:bg-[#333333] text-white px-7 py-3 text-[0.72rem] tracking-[0.12em] uppercase font-medium transition-colors rounded-lg">
               Enquire About This Service <ArrowRight size={14} />
             </Link>
           </div>
           <div className="relative">
-            <IMG_PH label="Product design concept sketches (800×600px)" cls="aspect-[4/3]" />
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-2 border-[#222222]/20 -z-10" />
+            <IMG_PH label="Add service image here (800×600px)" cls="aspect-[4/3]" />
           </div>
         </div>
       </section>
@@ -54,15 +54,16 @@ export default function Page() {
             <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
             <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium text-[#1a2535] leading-tight mb-8">Scope of Work</h2>
             <ul className="flex flex-col gap-3">
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Concept ideation and directional sketching</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Ergonomic and user experience research</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Form development and aesthetic refinement</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Design for Manufacture (DFM) consideration</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Colour, Material and Finish (CMF) specification</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Production-ready technical drawing preparation</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Competitive and technology landscape research</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Innovation workshops and ideation sprints</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Emerging technology scouting and feasibility</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Patent landscape analysis</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Concept development for breakthrough features</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">User validation of innovative concepts</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Technical feasibility assessment</span></li>
             </ul>
           </div>
-          <IMG_PH label="Refined 3D design render (800×600px)" cls="aspect-[4/3]" />
+          <IMG_PH label="Add scope image here (800×600px)" cls="aspect-[4/3]" />
         </div>
       </section>
 
@@ -75,8 +76,8 @@ export default function Page() {
           <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-white leading-tight mb-5">
             Why Choose Enrachna for This Service
           </h2>
-          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[580px] mx-auto mb-10">Our designers bring both creative vision and engineering discipline — ensuring your product looks exceptional and performs without compromise.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-[#f0f0f0] text-[#111111] text-white px-10 py-4 text-[0.75rem] tracking-[0.14em] uppercase font-medium transition-colors rounded-lg">
+          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[580px] mx-auto mb-10">Our innovation-first mindset means we never settle for incremental improvements. We push boundaries to find features and solutions that genuinely surprise and delight users.</p>
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-[#f0f0f0] text-[#111111] px-10 py-4 text-[0.75rem] tracking-[0.14em] uppercase font-medium transition-colors rounded-lg">
             Start a Conversation <ArrowRight size={14} />
           </Link>
         </div>
@@ -87,10 +88,10 @@ export default function Page() {
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-[clamp(1.8rem,2.5vw,2.4rem)] font-700 text-white mb-10">Other Services</h2>
           <div className="grid sm:grid-cols-3 gap-5">
-            {[
-              { href: "/services/product-engineering", label: "Product Engineering", img: "Engineering precision work" },
-              { href: "/services/prototyping", label: "Prototyping", img: "Rapid prototype models" },
-              { href: "/services/cad-modelling", label: "CAD Modelling", img: "3D CAD software" },
+                        {[
+              { href: "/services/product-strategy", label: "Product Strategy & Road Maps" },
+              { href: "/services/conceptualisation-industrial-design", label: "Conceptualisation & Industrial Design" },
+              { href: "/services/product-engineering", label: "Product Engineering" },
             ].map((s) => (
               <Link key={s.href} href={s.href} className="group block relative overflow-hidden rounded-lg">
                 <div className="aspect-[4/3] bg-[#1a1a1a] border border-white/10 rounded-lg overflow-hidden relative">

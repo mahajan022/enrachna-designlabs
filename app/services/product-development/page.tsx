@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
@@ -21,9 +22,9 @@ export default function Page() {
           <span className="text-[0.6rem] tracking-[0.28em] uppercase text-white/50 font-medium">Services</span>
           <div className="w-10 h-[1px] bg-white/30 mt-3 mb-5" />
           <h1 className="font-display text-[clamp(2.2rem,4vw,3.6rem)] font-medium text-white leading-[1.15] max-w-[600px]">
-            Hold Your Idea<br />Before You Scale It
+            From Design to Production-Ready Reality
           </h1>
-          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[500px] mt-5">Rapid physical prototypes to validate your design, test user interaction, and make informed decisions before committing to production tooling.</p>
+          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[500px] mt-5">Complete product development including tool design, injection moulds, progressive dies, and everything needed to scale your product.</p>
         </div>
       </div>
 
@@ -33,15 +34,14 @@ export default function Page() {
           <div>
             <span className="text-[0.6rem] tracking-[0.28em] uppercase text-[#1a2535] font-medium">Overview</span>
             <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
-            <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-[#1a2535] leading-tight mb-6">Prototyping</h2>
-            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">A prototype transforms an idea from a digital file into something you can hold, test, and show stakeholders. We produce prototypes at every fidelity level — from rough concept models to near-production appearance samples.</p>
+            <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-[#1a2535] leading-tight mb-6">Product Development – Tools, Molds & Dies</h2>
+            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">EDL has been instrumental in developing complete finished products and working alongside customers until product launch. Our product development service covers the full journey from finalised design to production-ready tooling — injection moulds, progressive dies, jigs, and fixtures — ensuring your product can be manufactured at scale efficiently and cost-effectively.</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#111111] hover:bg-[#333333] text-white px-7 py-3 text-[0.72rem] tracking-[0.12em] uppercase font-medium transition-colors rounded-lg">
               Enquire About This Service <ArrowRight size={14} />
             </Link>
           </div>
           <div className="relative">
-            <IMG_PH label="3D printed prototype (800×600px)" cls="aspect-[4/3]" />
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-2 border-[#222222]/20 -z-10" />
+            <IMG_PH label="Add service image here (800×600px)" cls="aspect-[4/3]" />
           </div>
         </div>
       </section>
@@ -54,15 +54,16 @@ export default function Page() {
             <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
             <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium text-[#1a2535] leading-tight mb-8">Scope of Work</h2>
             <ul className="flex flex-col gap-3">
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">FDM and SLA / SLS 3D printing</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">CNC-machined functional prototypes</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Appearance and finishing models</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Functional mechanism prototypes</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">User testing and evaluation models</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Pre-production samples and pilots</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Injection mould design and development</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Progressive die and sheet metal tooling</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Jigs, fixtures and assembly tooling</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Tooling validation and first article inspection</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Pilot run management and process optimisation</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Production ramp-up support</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Complete BOM and manufacturing documentation</span></li>
             </ul>
           </div>
-          <IMG_PH label="Finished appearance sample (800×600px)" cls="aspect-[4/3]" />
+          <IMG_PH label="Add scope image here (800×600px)" cls="aspect-[4/3]" />
         </div>
       </section>
 
@@ -75,21 +76,22 @@ export default function Page() {
           <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-white leading-tight mb-5">
             Why Choose Enrachna for This Service
           </h2>
-          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[580px] mx-auto mb-10">Prototyping early and often saves significant cost. Discovering a design flaw at prototype stage is exponentially cheaper than after tooling has been cut.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-[#f0f0f0] text-[#111111] text-white px-10 py-4 text-[0.75rem] tracking-[0.14em] uppercase font-medium transition-colors rounded-lg">
+          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[580px] mx-auto mb-10">We work as your extended team through the entire development phase — catching issues early, optimising for cost, and ensuring your product launches on time.</p>
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-[#f0f0f0] text-[#111111] px-10 py-4 text-[0.75rem] tracking-[0.14em] uppercase font-medium transition-colors rounded-lg">
             Start a Conversation <ArrowRight size={14} />
           </Link>
         </div>
       </section>
+
       {/* OTHER SERVICES */}
       <section className="bg-[#111111] py-20 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-[clamp(1.8rem,2.5vw,2.4rem)] font-700 text-white mb-10">Other Services</h2>
           <div className="grid sm:grid-cols-3 gap-5">
-            {[
-              { href: "/services/industrial-design", label: "Industrial Product Design" },
+                        {[
               { href: "/services/product-engineering", label: "Product Engineering" },
-              { href: "/services/prototyping", label: "Prototyping" },
+              { href: "/services/product-testing-validation", label: "Product Testing & Validation" },
+              { href: "/services/sourcing", label: "Sourcing" },
             ].map((s) => (
               <Link key={s.href} href={s.href} className="group block relative overflow-hidden rounded-lg">
                 <div className="aspect-[4/3] bg-[#1a1a1a] border border-white/10 rounded-lg overflow-hidden relative">
