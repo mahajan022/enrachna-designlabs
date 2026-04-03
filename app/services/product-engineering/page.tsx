@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
-
+import Image from "next/image";
 const IMG_PH = ({ label = "", cls = "" }: { label?: string; cls?: string }) => (
   <div className={`bg-[#f4f6f9] border-2 border-dashed border-[#dde2eb] rounded-lg flex flex-col items-center justify-center gap-3 text-[#5a6880] ${cls}`}>
     <svg className="opacity-30" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-      <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-      <polyline points="21 15 16 10 5 21"/>
+      <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" />
+      <polyline points="21 15 16 10 5 21" />
     </svg>
     {label && <span className="text-[0.66rem] tracking-wide text-center px-6">📌 {label}</span>}
   </div>
@@ -41,7 +41,13 @@ export default function Page() {
             </Link>
           </div>
           <div className="relative">
-            <IMG_PH label="Add service image here (800×600px)" cls="aspect-[4/3]" />
+            <Image
+              src="/product-engineering.png"
+              alt="Product Engineering"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover rounded-lg"
+            />
           </div>
         </div>
       </section>
@@ -88,7 +94,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-[clamp(1.8rem,2.5vw,2.4rem)] font-700 text-white mb-10">Other Services</h2>
           <div className="grid sm:grid-cols-3 gap-5">
-                        {[
+            {[
               { href: "/services/conceptualisation-industrial-design", label: "Conceptualisation & Industrial Design" },
               { href: "/services/product-development", label: "Product Development" },
               { href: "/services/product-testing-validation", label: "Product Testing & Validation" },
@@ -98,8 +104,8 @@ export default function Page() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
                   <div className="absolute inset-0 flex items-center justify-center text-white/10">
                     <svg width="64" height="64" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-                      <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-                      <polyline points="21 15 16 10 5 21"/>
+                      <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" />
+                      <polyline points="21 15 16 10 5 21" />
                     </svg>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
