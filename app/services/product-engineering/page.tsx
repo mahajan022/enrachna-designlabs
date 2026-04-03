@@ -70,7 +70,7 @@ export default function Page() {
             </ul>
           </div>
           <Image
-            src="/product-engineering-scope.jpg"
+            src="/product-engineering-scope.png"
             alt="Product Engineering Scope"
             width={800}
             height={600}
