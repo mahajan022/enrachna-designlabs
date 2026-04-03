@@ -43,7 +43,7 @@ export default function Page() {
           </div>
           <div className="relative">
             <Image
-              src="/conceptualisation-overview.png"
+              src="/conceptualisation-overview.jpeg"  // must match exact filename
               alt="Conceptualisation and Industrial Design"
               width={800}
               height={600}
