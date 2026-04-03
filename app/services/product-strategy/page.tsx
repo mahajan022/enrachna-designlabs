@@ -67,7 +67,13 @@ export default function Page() {
               <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Stakeholder alignment workshops</span></li>
             </ul>
           </div>
-          <IMG_PH label="Add scope image here (800×600px)" cls="aspect-[4/3]" />
+          <Image
+            src="/product-strategy-scope.jpg"
+            alt="Product Strategy Scope"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover rounded-lg"
+          />
         </div>
       </section>
 
