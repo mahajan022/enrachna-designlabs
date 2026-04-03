@@ -71,7 +71,7 @@ export default function Page() {
             </ul>
           </div>
           <Image
-            src="/conceptualisation-scope.jpg"
+            src="/conceptualisation-scope.jpeg"
             alt="Conceptualisation Scope"
             width={800}
             height={600}
