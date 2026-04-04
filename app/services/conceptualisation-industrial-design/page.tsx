@@ -95,35 +95,47 @@ export default function Page() {
           </Link>
         </div>
       </section>
-
       {/* OTHER SERVICES */}
       <section className="bg-[#111111] py-20 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-[clamp(1.8rem,2.5vw,2.4rem)] font-700 text-white mb-10">Other Services</h2>
           <div className="grid sm:grid-cols-3 gap-5">
-            {[
-              { href: "/services/product-engineering", label: "Product Engineering" },
-              { href: "/services/product-strategy", label: "Product Strategy & Road Maps" },
-              { href: "/services/product-development", label: "Product Development" },
-            ].map((s) => (
-              <Link key={s.href} href={s.href} className="group block relative overflow-hidden rounded-lg">
-                <div className="aspect-[4/3] bg-[#1a1a1a] border border-white/10 rounded-lg overflow-hidden relative">
+            <Link href="/services/product-engineering" className="group block relative overflow-hidden rounded-lg">
+                <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                  <Image src="/card-product-engineering.jpeg" alt="Product Engineering" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
-                  <div className="absolute inset-0 flex items-center justify-center text-white/10">
-                    <svg width="64" height="64" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-                      <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" />
-                      <polyline points="21 15 16 10 5 21" />
-                    </svg>
-                  </div>
                   <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
-                    <h3 className="font-display text-[1.05rem] font-700 text-white group-hover:text-[#4a4a5a] transition-colors">{s.label}</h3>
+                    <h3 className="font-display text-[1.05rem] font-700 text-white group-hover:text-[#4a4a5a] transition-colors">Product Engineering</h3>
                     <span className="inline-flex items-center gap-1 mt-1 text-[0.68rem] tracking-wide text-white/50 group-hover:text-white/70 transition-colors">
                       View Service <ChevronRight size={11} />
                     </span>
                   </div>
                 </div>
               </Link>
-            ))}
+            <Link href="/services/product-strategy" className="group block relative overflow-hidden rounded-lg">
+                <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                  <Image src="/card-product-strategy.jpeg" alt="Product Strategy & Road Maps" fill className="object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
+                    <h3 className="font-display text-[1.05rem] font-700 text-white group-hover:text-[#4a4a5a] transition-colors">Product Strategy & Road Maps</h3>
+                    <span className="inline-flex items-center gap-1 mt-1 text-[0.68rem] tracking-wide text-white/50 group-hover:text-white/70 transition-colors">
+                      View Service <ChevronRight size={11} />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            <Link href="/services/product-development" className="group block relative overflow-hidden rounded-lg">
+                <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                  <Image src="/card-product-development.jpeg" alt="Product Development" fill className="object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
+                    <h3 className="font-display text-[1.05rem] font-700 text-white group-hover:text-[#4a4a5a] transition-colors">Product Development</h3>
+                    <span className="inline-flex items-center gap-1 mt-1 text-[0.68rem] tracking-wide text-white/50 group-hover:text-white/70 transition-colors">
+                      View Service <ChevronRight size={11} />
+                    </span>
+                  </div>
+                </div>
+              </Link>
           </div>
         </div>
       </section>
