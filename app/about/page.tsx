@@ -1,15 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Shield, Zap, Users, Star } from "lucide-react";
-
-const IMG_PH = ({ label = "", cls = "" }: { label?: string; cls?: string }) => (
-  <div className={`bg-[#f4f6f9] border-2 border-dashed border-[#dde2eb] rounded-xl flex flex-col items-center justify-center gap-3 text-[#5a6880] ${cls}`}>
-    <svg className="opacity-30" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-      <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-      <polyline points="21 15 16 10 5 21"/>
-    </svg>
-    {label && <span className="text-[0.66rem] tracking-wide text-center px-6">📌 {label}</span>}
-  </div>
-);
 
 export default function AboutPage() {
   return (
@@ -23,7 +14,7 @@ export default function AboutPage() {
             A Studio Built Around One Simple Belief
           </h1>
           <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[500px] mt-5">
-            Great products don't happen by accident. They are the result of purposeful design, rigorous engineering, and a team that cares about every detail.
+            Great products don&apos;t happen by accident. They are the result of purposeful design, rigorous engineering, and a team that cares about every detail.
           </p>
         </div>
       </div>
@@ -44,7 +35,15 @@ export default function AboutPage() {
                 Fueled by our passion and commitment, we have been successfully delivering projects and striving to exceed the customer expectation by going the extra mile. For us, each and every project is unique, and keeping user needs in mind, we strive to address their pain points through inclusive design and detailed engineering.
               </p>
             </div>
-            <div><IMG_PH label="Add your studio / office photo here (800×600px)" cls="aspect-[4/3]" /></div>
+            <div className="rounded-xl overflow-hidden">
+              <Image
+                src="/about-team.jpeg"
+                alt="Enrachna Design Labs Team"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover rounded-xl"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -102,7 +101,7 @@ export default function AboutPage() {
       <section className="bg-[#111111] py-20 px-6 lg:px-10 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-700 text-white mb-4">Ready to Work Together?</h2>
-          <p className="text-white/60 text-[0.92rem] mb-8">Let's talk about your next product.</p>
+          <p className="text-white/60 text-[0.92rem] mb-8">Let&apos;s talk about your next product.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-[#1a2535] px-8 py-3.5 text-[0.78rem] font-700 hover:bg-[#f0f0f0] transition-colors rounded-sm">
             Get In Touch <ArrowRight size={14} />
           </Link>
