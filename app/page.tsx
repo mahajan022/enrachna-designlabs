@@ -88,7 +88,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-        <div className="absolute bottom-8 left-6 lg:left-10 z-20 flex items-center gap-4">
+       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4"> 
           <button onClick={prev} className="w-9 h-9 rounded-full border border-white/30 hover:border-white text-white/70 hover:text-white flex items-center justify-center transition-all"><ChevronLeft size={16} /></button>
           <div className="flex gap-2">
             {slides.map((_, i) => (
