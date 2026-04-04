@@ -1,16 +1,7 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ChevronRight } from "lucide-react";
-
-const IMG_PH = ({ label = "", cls = "" }: { label?: string; cls?: string }) => (
-  <div className={`bg-[#f4f6f9] border-2 border-dashed border-[#dde2eb] rounded-lg flex flex-col items-center justify-center gap-3 text-[#5a6880] ${cls}`}>
-    <svg className="opacity-30" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-      <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-      <polyline points="21 15 16 10 5 21"/>
-    </svg>
-    {label && <span className="text-[0.66rem] tracking-wide text-center px-6">📌 {label}</span>}
-  </div>
-);
 
 export default function Page() {
   return (
@@ -34,14 +25,20 @@ export default function Page() {
           <div>
             <span className="text-[0.6rem] tracking-[0.28em] uppercase text-[#1a2535] font-medium">Overview</span>
             <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
-            <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-[#1a2535] leading-tight mb-6">Innovation & Industry First Features</h2>
-            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">Differentiation is in our DNA. At Enrachna Design Labs, we actively research and develop industry-first features for every project. We invest hundreds of hours exploring what's possible — not just what already exists — so your product stands out the moment it hits the market.</p>
+            <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-[#1a2535] leading-tight mb-6">Innovation &amp; Industry First Features</h2>
+            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">Differentiation is in our DNA. At Enrachna Design Labs, we actively research and develop industry-first features for every project. We invest hundreds of hours exploring what&apos;s possible — not just what already exists — so your product stands out the moment it hits the market.</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#111111] hover:bg-[#333333] text-white px-7 py-3 text-[0.72rem] tracking-[0.12em] uppercase font-medium transition-colors rounded-lg">
               Enquire About This Service <ArrowRight size={14} />
             </Link>
           </div>
           <div className="relative">
-            <IMG_PH label="Add service image here (800×600px)" cls="aspect-[4/3]" />
+            <Image
+              src="/innovation-overview.jpeg"
+              alt="Innovation and Industry First"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover rounded-lg"
+            />
           </div>
         </div>
       </section>
@@ -63,7 +60,13 @@ export default function Page() {
               <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Technical feasibility assessment</span></li>
             </ul>
           </div>
-          <IMG_PH label="Add scope image here (800×600px)" cls="aspect-[4/3]" />
+          <Image
+            src="/innovation-scope.jpeg"
+            alt="Innovation Scope of Work"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover rounded-lg"
+          />
         </div>
       </section>
 
@@ -88,7 +91,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-[clamp(1.8rem,2.5vw,2.4rem)] font-700 text-white mb-10">Other Services</h2>
           <div className="grid sm:grid-cols-3 gap-5">
-                        {[
+            {[
               { href: "/services/product-strategy", label: "Product Strategy & Road Maps" },
               { href: "/services/conceptualisation-industrial-design", label: "Conceptualisation & Industrial Design" },
               { href: "/services/product-engineering", label: "Product Engineering" },
