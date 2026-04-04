@@ -59,12 +59,12 @@ export default function AboutPage() {
           </p>
           <div className="grid sm:grid-cols-3 gap-6">
             {[
-              { title: "Customer Desirability", icon: "👤", desc: "We place the end-user at the centre of every design decision — ensuring the product solves real problems people actually have." },
-              { title: "Technical Feasibility", icon: "⚙️", desc: "Our engineering team validates every design against real-world manufacturing constraints, materials, and tolerances." },
-              { title: "Business Viability", icon: "📊", desc: "We help clients evaluate commercial potential, cost of goods, and go-to-market strategy alongside the design process." },
+              { title: "Customer Desirability", icon: "/icons/customer.svg", desc: "We place the end-user at the centre of every design decision — ensuring the product solves real problems people actually have." },
+              { title: "Technical Feasibility", icon: "/icons/technology.svg", desc: "Our engineering team validates every design against real-world manufacturing constraints, materials, and tolerances." },
+              { title: "Business Viability", icon: "/icons/business.svg", desc: "We help clients evaluate commercial potential, cost of goods, and go-to-market strategy alongside the design process." },
             ].map((f) => (
               <div key={f.title} className="bg-white border border-[#dde2eb] rounded-xl p-7">
-                <div className="text-3xl mb-4">{f.icon}</div>
+                <Image src={f.icon} alt={f.title} width={40} height={40} className="mb-4" />
                 <h3 className="font-display text-[1rem] font-700 text-[#1a2535] mb-3">{f.title}</h3>
                 <p className="text-[#5a6880] text-[0.82rem] leading-relaxed">{f.desc}</p>
               </div>
