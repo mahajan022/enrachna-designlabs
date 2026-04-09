@@ -1,141 +1,72 @@
-"use client";
 import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
-const IMG_PH = ({ label = "", cls = "" }: { label?: string; cls?: string }) => (
-  <div className={`bg-[#f4f6f9] border-2 border-dashed border-[#dde2eb] rounded-lg flex flex-col items-center justify-center gap-3 text-[#5a6880] ${cls}`}>
-    <svg className="opacity-30" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-      <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-      <polyline points="21 15 16 10 5 21"/>
-    </svg>
-    {label && <span className="text-[0.66rem] tracking-wide text-center px-6">📌 {label}</span>}
-  </div>
-);
-
 export default function Page() {
   return (
     <>
-      {/* HERO */}
-      <div className="bg-[#111111] relative overflow-hidden px-6 lg:px-10 py-20">
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle, #b8956a 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+      <div className="bg-[#0f2428] relative overflow-hidden px-6 lg:px-10 py-20">
+        <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle, #b8956a 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
         <div className="max-w-7xl mx-auto relative z-10">
-          <span className="text-[0.6rem] tracking-[0.28em] uppercase text-white/50 font-medium">Services</span>
-          <div className="w-10 h-[1px] bg-white/30 mt-3 mb-5" />
-          <h1 className="font-display text-[clamp(2.2rem,4vw,3.6rem)] font-medium text-white leading-[1.15] max-w-[600px]">
-            From Design to Production-Ready Reality
-          </h1>
-          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[500px] mt-5">Complete product development including tool design, injection moulds, progressive dies, and everything needed to scale your product.</p>
+          <span className="text-[0.62rem] tracking-[0.28em] uppercase text-[#b8956a]/70 font-medium">Services</span>
+          <div className="w-8 h-[2px] bg-[#b8956a]/40 mt-3 mb-5" />
+          <h1 className="font-display text-[clamp(2.2rem,4vw,3.6rem)] font-semibold text-white leading-[1.15] max-w-[620px]">From Validated Concept to Production-Ready Product</h1>
+          <p className="text-white/55 text-[1rem] leading-relaxed max-w-[500px] mt-5">Complete end-to-end product development — integrating design, engineering, tooling, and supplier management into a single seamless process.</p>
         </div>
       </div>
-
-      {/* INTRO */}
       <section className="bg-white py-24 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <div>
-            <span className="text-[0.6rem] tracking-[0.28em] uppercase text-[#1a2535] font-medium">Overview</span>
-            <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
-            <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-[#1a2535] leading-tight mb-6">Product Development – Tools, Molds & Dies</h2>
-            <p className="text-[#5a6880] text-[0.92rem] leading-relaxed mb-8">EDL has been instrumental in developing complete finished products and working alongside customers until product launch. Our product development service covers the full journey from finalised design to production-ready tooling — injection moulds, progressive dies, jigs, and fixtures — ensuring your product can be manufactured at scale efficiently and cost-effectively.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-[#111111] hover:bg-[#333333] text-white px-7 py-3 text-[0.72rem] tracking-[0.12em] uppercase font-medium transition-colors rounded-lg">
-              Enquire About This Service <ArrowRight size={14} />
-            </Link>
+            <span className="text-[0.62rem] tracking-[0.28em] uppercase text-[#b8956a] font-medium">Overview</span>
+            <div className="w-8 h-[2px] bg-[#1a4a52] mt-3 mb-5" />
+            <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold text-[#1a2a2e] leading-tight mb-6">Product Development</h2>
+            <p className="text-[#5a6e74] text-[0.97rem] leading-relaxed mb-8">Product development is where ideas become launch-ready products. We manage the full development cycle — taking your validated concept through detailed engineering, prototyping, tooling, testing, and supplier qualification — delivering a product ready for mass production with full documentation and quality control in place.</p>
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-[#1a4a52] hover:bg-[#0f3038] text-white px-7 py-3.5 text-[0.88rem] font-medium transition-colors rounded-sm">Enquire About This Service <ArrowRight size={14} /></Link>
           </div>
-          <div className="relative">
-            <Image
-  src="/product-development.jpeg"
-  alt="Product Development Tools Molds and Dies"
-  width={800}
-  height={600}
-  className="w-full h-full object-cover rounded-lg"
-/>
+          <div className="relative rounded-xl overflow-hidden">
+            <Image src="/product-development.png" alt="Product Development" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
           </div>
         </div>
       </section>
-
-      {/* SCOPE */}
-      <section className="py-24 px-6 lg:px-10 bg-[#f4f6f9]">
+      <section className="py-24 px-6 lg:px-10 bg-[#f7f5f2]">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <div>
-            <span className="text-[0.6rem] tracking-[0.28em] uppercase text-[#1a2535] font-medium">What&apos;s Included</span>
-            <div className="w-10 h-[1px] bg-[#111111] mt-3 mb-5" />
-            <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium text-[#1a2535] leading-tight mb-8">Scope of Work</h2>
+            <span className="text-[0.62rem] tracking-[0.28em] uppercase text-[#b8956a] font-medium">What&apos;s Included</span>
+            <div className="w-8 h-[2px] bg-[#1a4a52] mt-3 mb-5" />
+            <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold text-[#1a2a2e] leading-tight mb-8">Scope of Work</h2>
             <ul className="flex flex-col gap-3">
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Injection mould design and development</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Progressive die and sheet metal tooling</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Jigs, fixtures and assembly tooling</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Tooling validation and first article inspection</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Pilot run management and process optimisation</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Production ramp-up support</span></li>
-              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#111111] flex-shrink-0 mt-2" /><span className="text-[#5a6880] text-[0.88rem] leading-relaxed">Complete BOM and manufacturing documentation</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#1a4a52] flex-shrink-0 mt-2" /><span className="text-[#5a6e74] text-[0.92rem] leading-relaxed">Detailed design and engineering through to production</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#1a4a52] flex-shrink-0 mt-2" /><span className="text-[#5a6e74] text-[0.92rem] leading-relaxed">Prototyping and iterative design validation</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#1a4a52] flex-shrink-0 mt-2" /><span className="text-[#5a6e74] text-[0.92rem] leading-relaxed">Tooling design, development, and qualification</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#1a4a52] flex-shrink-0 mt-2" /><span className="text-[#5a6e74] text-[0.92rem] leading-relaxed">Supplier selection and component sourcing</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#1a4a52] flex-shrink-0 mt-2" /><span className="text-[#5a6e74] text-[0.92rem] leading-relaxed">Quality control plans and inspection criteria</span></li>
+              <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-[#1a4a52] flex-shrink-0 mt-2" /><span className="text-[#5a6e74] text-[0.92rem] leading-relaxed">Production ramp-up support and documentation</span></li>
             </ul>
           </div>
-           <Image
-  src="/product-development-scope.jpeg"
-  alt="Product Development Scope"
-  width={800}
-  height={600}
-  className="w-full h-full object-cover rounded-lg"
-/>
+          <div className="rounded-xl overflow-hidden">
+            <Image src="/product-development-scope.png" alt="Product Development scope" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
+          </div>
         </div>
       </section>
-
-      {/* WHY */}
-      <section className="bg-[#111111] py-20 px-6 lg:px-10 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle, #b8956a 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
+      <section className="bg-[#1a4a52] py-20 px-6 lg:px-10 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle, #b8956a 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <span className="text-[0.6rem] tracking-[0.28em] uppercase text-white/50 font-medium">Our Approach</span>
-          <div className="w-10 h-[1px] bg-white/30 mt-3 mb-5 mx-auto" />
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-white leading-tight mb-5">
-            Why Choose Enrachna for This Service
-          </h2>
-          <p className="text-white/60 text-[0.95rem] leading-relaxed max-w-[580px] mx-auto mb-10">We work as your extended team through the entire development phase — catching issues early, optimising for cost, and ensuring your product launches on time.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-[#f0f0f0] text-[#111111] px-10 py-4 text-[0.75rem] tracking-[0.14em] uppercase font-medium transition-colors rounded-lg">
-            Start a Conversation <ArrowRight size={14} />
-          </Link>
+          <span className="text-[0.62rem] tracking-[0.28em] uppercase text-[#b8956a]/80 font-medium">Our Approach</span>
+          <div className="w-8 h-[2px] bg-[#b8956a]/40 mt-3 mb-5 mx-auto" />
+          <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold text-white leading-tight mb-5">Why Choose Enrachna for This Service</h2>
+          <p className="text-white/60 text-[0.97rem] leading-relaxed max-w-[580px] mx-auto mb-10">With every discipline under one roof, we eliminate the handoff delays and communication gaps that slow down multi-agency development programmes.</p>
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-[#b8956a] hover:bg-[#a07a52] text-white px-10 py-4 text-[0.88rem] font-medium transition-colors rounded-sm">Start a Conversation <ArrowRight size={14} /></Link>
         </div>
       </section>
-      {/* OTHER SERVICES */}
-      <section className="bg-[#111111] py-20 px-6 lg:px-10">
+      <section className="bg-[#0f2428] py-20 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display text-[clamp(1.8rem,2.5vw,2.4rem)] font-700 text-white mb-10">Other Services</h2>
+          <span className="text-[0.62rem] tracking-[0.28em] uppercase text-[#b8956a]/70 font-medium">Explore More</span>
+          <div className="w-8 h-[2px] bg-[#b8956a]/30 mt-3 mb-8" />
+          <h2 className="font-display text-[clamp(1.6rem,2.5vw,2.2rem)] font-semibold text-white mb-8">Other Services</h2>
           <div className="grid sm:grid-cols-3 gap-5">
-            <Link href="/services/product-engineering" className="group block relative overflow-hidden rounded-lg">
-                <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
-                  <Image src="/card-product-engineering.jpeg" alt="Product Engineering" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
-                    <h3 className="font-display text-[1.05rem] font-700 text-white group-hover:text-[#4a4a5a] transition-colors">Product Engineering</h3>
-                    <span className="inline-flex items-center gap-1 mt-1 text-[0.68rem] tracking-wide text-white/50 group-hover:text-white/70 transition-colors">
-                      View Service <ChevronRight size={11} />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            <Link href="/services/product-testing-validation" className="group block relative overflow-hidden rounded-lg">
-                <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
-                  <Image src="/card-product-testing.jpeg" alt="Product Testing & Validation" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
-                    <h3 className="font-display text-[1.05rem] font-700 text-white group-hover:text-[#4a4a5a] transition-colors">Product Testing & Validation</h3>
-                    <span className="inline-flex items-center gap-1 mt-1 text-[0.68rem] tracking-wide text-white/50 group-hover:text-white/70 transition-colors">
-                      View Service <ChevronRight size={11} />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            <Link href="/services/sourcing" className="group block relative overflow-hidden rounded-lg">
-                <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
-                  <Image src="/card-sourcing.jpeg" alt="Sourcing" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
-                    <h3 className="font-display text-[1.05rem] font-700 text-white group-hover:text-[#4a4a5a] transition-colors">Sourcing</h3>
-                    <span className="inline-flex items-center gap-1 mt-1 text-[0.68rem] tracking-wide text-white/50 group-hover:text-white/70 transition-colors">
-                      View Service <ChevronRight size={11} />
-                    </span>
-                  </div>
-                </div>
-              </Link>
+            <Link href="/services/tool-design-development" className="group block relative overflow-hidden rounded-xl"><div className="aspect-[4/3] rounded-xl overflow-hidden relative"><Image src="/tool-design-development.png" alt="Tool Design and Development" fill className="object-cover" /><div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" /><div className="absolute bottom-0 left-0 right-0 p-5 z-20"><h3 className="font-display text-[1rem] font-semibold text-white leading-snug">Tool Design and Development</h3><span className="inline-flex items-center gap-1 mt-1.5 text-[0.7rem] tracking-wide text-[#b8956a]/80 group-hover:text-[#b8956a] transition-colors">View Service <ChevronRight size={11} /></span></div></div></Link>
+            <Link href="/services/packaging-design" className="group block relative overflow-hidden rounded-xl"><div className="aspect-[4/3] rounded-xl overflow-hidden relative"><Image src="/packaging-design.png" alt="Packaging Design" fill className="object-cover" /><div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" /><div className="absolute bottom-0 left-0 right-0 p-5 z-20"><h3 className="font-display text-[1rem] font-semibold text-white leading-snug">Packaging Design</h3><span className="inline-flex items-center gap-1 mt-1.5 text-[0.7rem] tracking-wide text-[#b8956a]/80 group-hover:text-[#b8956a] transition-colors">View Service <ChevronRight size={11} /></span></div></div></Link>
+            <Link href="/services/consulting" className="group block relative overflow-hidden rounded-xl"><div className="aspect-[4/3] rounded-xl overflow-hidden relative"><Image src="/consulting.png" alt="Consulting" fill className="object-cover" /><div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" /><div className="absolute bottom-0 left-0 right-0 p-5 z-20"><h3 className="font-display text-[1rem] font-semibold text-white leading-snug">Consulting</h3><span className="inline-flex items-center gap-1 mt-1.5 text-[0.7rem] tracking-wide text-[#b8956a]/80 group-hover:text-[#b8956a] transition-colors">View Service <ChevronRight size={11} /></span></div></div></Link>
           </div>
         </div>
       </section>

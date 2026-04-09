@@ -1,43 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #111111;
-  --color-primary-dark: #0a0a0a;
-  --color-primary-light: #333333;
-  --color-surface: #f4f6f9;
-  --color-surface-2: #eef1f6;
-  --color-ink: #1a2535;
-  --color-muted: #5a6880;
-  --color-border: #dde2eb;
-
-  --font-display: "Plus Jakarta Sans", sans-serif;
-  --font-sans: "Manrope", sans-serif;
+  --color-brand-teal: #1a4a52;
+  --color-brand-teal-dark: #0f3038;
+  --color-brand-gold: #b8956a;
+  --color-surface: #f7f5f2;
+  --color-ink: #1a2a2e;
+  --color-muted: #5a6e74;
+  --color-border: #ddd8d0;
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
 }
 
 :root {
-  --primary: #111111;
-  --primary-dark: #0a0a0a;
-  --primary-light: #333333;
-  --surface: #f4f6f9;
-  --ink: #1a2535;
-  --muted: #5a6880;
-  --border: #dde2eb;
+  --brand-teal: #1a4a52;
+  --brand-teal-dark: #0f3038;
+  --brand-gold: #b8956a;
+  --surface: #f7f5f2;
+  --ink: #1a2a2e;
+  --muted: #5a6e74;
+  --border: #ddd8d0;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
   background: #ffffff;
-  color: var(--ink);
+  color: #1a2a2e;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-display {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
 }
 
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #f4f6f9; }
-::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+::-webkit-scrollbar-track { background: #f7f5f2; }
+::-webkit-scrollbar-thumb { background: #1a4a52; border-radius: 10px; }
 
 .carousel-track {
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
