@@ -8,7 +8,7 @@
   --color-ink: #1a2a2e;
   --color-muted: #5a6e74;
   --color-border: #ddd8d0;
-  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-display: var(--font-sora), "Segoe UI", system-ui, sans-serif;
   --font-sans: var(--font-inter), system-ui, sans-serif;
 }
 
@@ -38,10 +38,11 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .font-display {
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-weight: 600;
+  font-family: var(--font-sora), "Segoe UI", system-ui, sans-serif;
+  font-weight: 700;
   -webkit-font-smoothing: antialiased;
-  text-rendering: geometricPrecision;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 ::-webkit-scrollbar { width: 4px; }
