@@ -23,10 +23,18 @@ export const metadata: Metadata = {
   description: "End-to-end product design and engineering studio based in Mumbai.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${cormorant.variable} font-sans`}>
-      <body className="pt-[76px] font-sans antialiased">
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} ${cormorant.variable}`}
+    >
+      <body className="pt-[76px]">
         <Navbar />
         <main>{children}</main>
         <Footer />
