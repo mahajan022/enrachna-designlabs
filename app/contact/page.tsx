@@ -57,9 +57,9 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap gap-8 lg:gap-16 items-center justify-center">
             {[
-              { icon: Phone, label: "+91 9506 392 933", href: "tel:+919506392933" },
+              { icon: Phone, label: "+91 9834305124", href: "tel:+919834305124" },
               { icon: Mail, label: "enrachnadesignlabs@gmail.com", href: "mailto:enrachnadesignlabs@gmail.com" },
-              { icon: Globe, label: "www.enrachnadesign.com", href: "https://www.enrachnadesign.com" },
+              { icon: Globe, label: "www.enrachnadesignlabs.com", href: "https://www.enrachnadesignlabs.com" },
               { icon: MapPin, label: "Mumbai, Maharashtra, India", href: null },
             ].map((c, i) => (
               <div key={i} className="flex items-center gap-3">

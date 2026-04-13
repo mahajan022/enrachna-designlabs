@@ -58,7 +58,7 @@ export default function Footer() {
           <div>
             <h4 className="text-[0.62rem] tracking-[0.22em] uppercase text-white/85 font-semibold mb-5">Contact</h4>
             <div className="flex flex-col gap-3.5">
-              <a href="tel:+919506392933" className="flex items-start gap-2.5 group">
+              <a href="tel:+919834305124" className="flex items-start gap-2.5 group">
                 <Phone size={13} className="text-[#b8956a]/60 flex-shrink-0 mt-0.5" />
                 <span className="text-[0.78rem] text-white/40 group-hover:text-white transition-colors">+91 9506 392 933</span>
               </a>
@@ -66,7 +66,7 @@ export default function Footer() {
                 <Mail size={13} className="text-[#b8956a]/60 flex-shrink-0 mt-0.5" />
                 <span className="text-[0.78rem] text-white/40 group-hover:text-white transition-colors break-all">enrachnadesignlabs@gmail.com</span>
               </a>
-              <a href="https://www.enrachnadesign.com" target="_blank" className="flex items-start gap-2.5 group">
+              <a href="https://www.enrachnadesignlabs.com" target="_blank" className="flex items-start gap-2.5 group">
                 <Globe size={13} className="text-[#b8956a]/60 flex-shrink-0 mt-0.5" />
                 <span className="text-[0.78rem] text-white/40 group-hover:text-white transition-colors">www.enrachnadesign.com</span>
               </a>
