@@ -43,6 +43,7 @@ export default function Footer() {
             <h4 className="text-[0.62rem] tracking-[0.22em] uppercase text-white/85 font-semibold mb-5">Company</h4>
             <ul className="flex flex-col gap-2.5">
               {[
+                { label: "Our Work", href: "/our-work" },
                 { label: "About Us", href: "/about" },
                 { label: "Case Studies", href: "/case-studies" },
                 { label: "Contact", href: "/contact" },
