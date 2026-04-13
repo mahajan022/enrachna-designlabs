@@ -28,7 +28,7 @@ export default function Page() {
             </Link>
           </div>
           <div className="relative rounded-xl overflow-hidden">
-            <Image src="/cad-modelling.png" alt="2D / 3D CAD Modelling" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
+            <Image src="/cad-modelling.jpeg" alt="2D / 3D CAD Modelling" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
           </div>
         </div>
       </section>
@@ -48,7 +48,7 @@ export default function Page() {
             </ul>
           </div>
           <div className="rounded-xl overflow-hidden">
-            <Image src="/cad-modelling-scope.png" alt="2D / 3D CAD Modelling scope" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
+            <Image src="/cad-modelling-scope.jpeg" alt="2D / 3D CAD Modelling scope" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
           </div>
         </div>
       </section>

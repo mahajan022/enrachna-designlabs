@@ -28,7 +28,7 @@ export default function Page() {
             </Link>
           </div>
           <div className="relative rounded-xl overflow-hidden">
-            <Image src="/industrial-product-design.png" alt="Industrial Product Design" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
+            <Image src="/industrial-product-design.jpeg" alt="Industrial Product Design" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
           </div>
         </div>
       </section>
@@ -48,7 +48,7 @@ export default function Page() {
             </ul>
           </div>
           <div className="rounded-xl overflow-hidden">
-            <Image src="/industrial-product-design-scope.png" alt="Industrial Product Design scope" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
+            <Image src="/industrial-product-design-scope.jpeg" alt="Industrial Product Design scope" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
           </div>
         </div>
       </section>
