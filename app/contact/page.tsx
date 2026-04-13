@@ -14,7 +14,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <span className="text-[0.65rem] tracking-[0.28em] uppercase text-[#b8956a]/70 font-medium">Contact</span>
           <div className="w-8 h-[2px] bg-[#b8956a]/40 mt-3 mb-5" />
-          <h1 className="font-display text-[clamp(2.2rem,4vw,3.6rem)] font-semibold text-white leading-[1.15] max-w-[600px]">Let&apos;s Build Something<br />Worth Remembering</h1>
+          <h1 className="font-display text-[clamp(2.2rem,4vw,3.6rem)] font-semibold text-white leading-[1.15] max-w-[600px]">Let&apos;s Build Something<br />Meaningful</h1>
           <p className="text-white/55 text-[1.05rem] leading-relaxed max-w-[480px] mt-5">Share a few details about your project and our team will reach out to discuss how we can help.</p>
         </div>
       </div>
