@@ -24,7 +24,7 @@ export default function Page() {
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#1a4a52] hover:bg-[#0f3038] text-white px-7 py-3.5 text-[0.88rem] font-medium transition-colors rounded-sm">Enquire About This Service <ArrowRight size={14} /></Link>
           </div>
           <div className="relative rounded-xl overflow-hidden">
-            <Image src="/consulting.png" alt="Consulting" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
+            <Image src="/consulting.jpeg" alt="Consulting" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
           </div>
         </div>
       </section>
@@ -44,7 +44,7 @@ export default function Page() {
             </ul>
           </div>
           <div className="rounded-xl overflow-hidden">
-            <Image src="/consulting-scope.png" alt="Consulting scope" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
+            <Image src="/consulting-scope.jpeg" alt="Consulting scope" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
           </div>
         </div>
       </section>
