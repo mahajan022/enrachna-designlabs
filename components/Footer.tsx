@@ -60,7 +60,7 @@ export default function Footer() {
             <div className="flex flex-col gap-3.5">
               <a href="tel:+919834305124" className="flex items-start gap-2.5 group">
                 <Phone size={13} className="text-[#b8956a]/60 flex-shrink-0 mt-0.5" />
-                <span className="text-[0.78rem] text-white/40 group-hover:text-white transition-colors">+91 9506 392 933</span>
+                <span className="text-[0.78rem] text-white/40 group-hover:text-white transition-colors">+91 9834305124</span>
               </a>
               <a href="mailto:enrachnadesignlabs@gmail.com" className="flex items-start gap-2.5 group">
                 <Mail size={13} className="text-[#b8956a]/60 flex-shrink-0 mt-0.5" />
@@ -68,7 +68,7 @@ export default function Footer() {
               </a>
               <a href="https://www.enrachnadesignlabs.com" target="_blank" className="flex items-start gap-2.5 group">
                 <Globe size={13} className="text-[#b8956a]/60 flex-shrink-0 mt-0.5" />
-                <span className="text-[0.78rem] text-white/40 group-hover:text-white transition-colors">www.enrachnadesign.com</span>
+                <span className="text-[0.78rem] text-white/40 group-hover:text-white transition-colors">www.enrachnadesignlabs.com</span>
               </a>
               <div className="flex items-start gap-2.5">
                 <MapPin size={13} className="text-[#b8956a]/60 flex-shrink-0 mt-0.5" />
