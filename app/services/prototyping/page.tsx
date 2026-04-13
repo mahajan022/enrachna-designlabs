@@ -22,7 +22,7 @@ export default function Page() {
             <span className="text-[0.62rem] tracking-[0.28em] uppercase text-[#b8956a] font-medium">Overview</span>
             <div className="w-8 h-[2px] bg-[#1a4a52] mt-3 mb-5" />
             <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold text-[#1a2a2e] leading-tight mb-6">Prototyping</h2>
-            <p className="text-[#5a6e74] text-[0.97rem] leading-relaxed mb-8">Prototyping transforms digital designs into physical reality, allowing you to validate assumptions, test usability, and catch issues before they become expensive manufacturing problems. We build prototypes at every fidelity level — from appearance models that showcase your CMF to fully functional units ready for user testing.</p>
+            <p className="text-[#5a6e74] text-[0.97rem] leading-relaxed mb-8">Encharna delivers highly accurate components, parts & fully-functional prototypes using wide variety of materials. allowing you to validate assumptions, test usability, and catch issues before they become expensive manufacturing problems. We build prototypes at every fidelity level — from appearance models that showcase your CMF to fully functional units ready for user testing.</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#1a4a52] hover:bg-[#0f3038] text-white px-7 py-3.5 text-[0.88rem] font-medium transition-colors rounded-sm">Enquire About This Service <ArrowRight size={14} /></Link>
           </div>
           <div className="relative rounded-xl overflow-hidden fade-right">

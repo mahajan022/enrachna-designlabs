@@ -24,7 +24,7 @@ export default function Page() {
             <span className="text-[0.62rem] tracking-[0.28em] uppercase text-[#b8956a] font-medium">Overview</span>
             <div className="w-8 h-[2px] bg-[#1a4a52] mt-3 mb-5" />
             <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold text-[#1a2a2e] leading-tight mb-6">Industrial Product Design</h2>
-            <p className="text-[#5a6e74] text-[0.97rem] leading-relaxed mb-8">Great products start with great design. Our industrial design team blends aesthetics, ergonomics, and manufacturability to create products that stand out on the shelf and in the hands of your users. From early sketches to final CMF definition, we guide the complete visual and physical language of your product.</p>
+            <p className="text-[#5a6e74] text-[0.97rem] leading-relaxed mb-8">One of our key focus is to conceive designs which are aesthetically pleasing but do not compromise on functionality in any way. Our industrial design team blends aesthetics, ergonomics, and manufacturability to create products that stand out on the shelf and in the usability of consumer.</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#1a4a52] hover:bg-[#0f3038] text-white px-7 py-3.5 text-[0.88rem] font-medium transition-colors rounded-sm">
               Enquire About This Service <ArrowRight size={14} />
             </Link>

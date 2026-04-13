@@ -9,7 +9,7 @@ const projects = [
     title: "BLDC Ceiling Fan Power Controller",
     category: "Home Appliance",
     description: "A compact and efficient BLDC motor power controller designed for ceiling fans. Engineered for precise speed control, energy efficiency, and silent operation — delivering superior performance over conventional AC motor controllers.",
-    tags: ["Product Engineering", "PCB Design", "Industrial Design"],
+    tags: ["Product Designing", "Product Engineering", "Product Development"],
     img: "/work-bldc-fan.jpg",
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     title: "AC Temperature Controller",
     category: "Home Appliances",
     description: "A sleek and intuitive temperature controller module for air conditioning systems. Designed with a focus on user experience and manufacturability — integrating seamless hardware and software to deliver precise thermal management.",
-    tags: ["Product Design", "Electronics", "Prototyping"],
+    tags: ["Product Design", "Prototyping"],
     img: "/work-ac-controller.jpg",
   },
 ];
