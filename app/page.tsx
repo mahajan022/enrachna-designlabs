@@ -46,6 +46,7 @@ const whyPoints = [
 
 export default function HomePage() {
   const [current, setCurrent] = useState(0);
+  const [loaded, setLoaded] = useState<boolean[]>([false, false, false]);
   const [sent, setSent] = useState(false);
 
   const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
@@ -56,14 +57,36 @@ export default function HomePage() {
     return () => clearInterval(t);
   }, [next]);
 
+  const markLoaded = (i: number) => {
+    setLoaded((prev) => {
+      const next = [...prev];
+      next[i] = true;
+      return next;
+    });
+  };
+
   return (
     <>
       <ScrollObserver />
       {/* ── HERO CAROUSEL ── */}
       <section className="relative h-[90vh] min-h-[560px] overflow-hidden">
         {slides.map((s, i) => (
-          <div key={i} className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}>
-            <Image src={s.img} alt="" fill sizes="100vw" className="object-cover" priority={i === 0} />
+          <div
+            key={i}
+            className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
+          >
+            {/* Grey background shown until image loads */}
+            <div className={`absolute inset-0 bg-[#1a2a2e] transition-opacity duration-500 ${loaded[i] ? "opacity-0" : "opacity-100"}`} />
+            <Image
+              src={s.img}
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover"
+              priority={i === 0}
+              loading={i === 0 ? "eager" : "lazy"}
+              onLoad={() => markLoaded(i)}
+            />
             <div className="absolute inset-0 bg-black/60" />
           </div>
         ))}
@@ -112,7 +135,7 @@ export default function HomePage() {
             <p className="text-[#5a6e74] text-[0.97rem] leading-relaxed mb-8">By offering all key services under one roof, our customers enjoy better project execution, reduced costs, fewer follow-ups, faster time-to-market, enhanced product quality, and complete confidentiality.</p>
             <Link href="/about" className="inline-flex items-center gap-2 bg-[#1a4a52] hover:bg-[#0f3038] text-white px-7 py-3 text-[0.9rem] font-medium transition-colors rounded-sm">Learn More <ChevronRight size={14} /></Link>
           </div>
-          <div className="rounded-xl overflow-hidden">
+          <div className="rounded-xl overflow-hidden fade-right">
             <Image src="/studio-team.png" alt="Enrachna Design Labs Studio" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
           </div>
         </div>
@@ -125,7 +148,7 @@ export default function HomePage() {
             The Power of <span className="text-[#1a4a52] text-[2.2rem] leading-none">3</span> Key Factors Driving Our Complete Design Process
           </h2>
           <p className="text-[#5a6e74] text-[0.95rem] leading-relaxed max-w-[640px] mb-10">Our comprehensive process is structured around three fundamental principles — proven instrumental in delivering successful projects tailored to customer needs.</p>
-          <div className="flex flex-wrap items-center gap-5 mb-8">
+          <div className="flex flex-wrap items-center gap-5 mb-8 fade-up">
             {[
               { label: "Customer Desirability", icon: "/icons/customer.svg" },
               { label: "Technical Feasibility", icon: "/icons/technology.svg" },
@@ -181,10 +204,10 @@ export default function HomePage() {
       {/* ── GET IN TOUCH ── */}
       <section className="bg-[#f7f5f2] py-24 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
-          <div className="rounded-xl overflow-hidden">
+          <div className="rounded-xl overflow-hidden fade-left">
             <Image src="/office-contact.png" alt="Enrachna Office" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
           </div>
-          <div>
+          <div className="fade-right">
             <p className="text-[0.65rem] tracking-[0.25em] uppercase text-[#b8956a] font-semibold mb-3">Reach Out</p>
             <div className="w-8 h-[2px] bg-[#1a4a52] mb-5" />
             <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold text-[#1a2a2e] mb-2">Let&apos;s Build Something Meaningful</h2>
