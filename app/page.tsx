@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
+import ScrollObserver from "@/components/ScrollObserver";
 import { ArrowRight, ChevronRight, ChevronLeft, Layers, Cpu, Box, Settings, Package, Users, Wrench, FlaskConical } from "lucide-react";
 
 const slides: { title: string; sub: string; tag: string; img: string }[] = [
@@ -57,6 +58,7 @@ export default function HomePage() {
 
   return (
     <>
+      <ScrollObserver />
       {/* ── HERO CAROUSEL ── */}
       <section className="relative h-[90vh] min-h-[560px] overflow-hidden">
         {slides.map((s, i) => (
@@ -102,7 +104,7 @@ export default function HomePage() {
       {/* ── WHO WE ARE ── */}
       <section className="bg-white py-20 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <div className="fade-left">
             <p className="text-[0.65rem] tracking-[0.25em] uppercase text-[#b8956a] font-semibold mb-3">Who We Are</p>
             <div className="w-8 h-[2px] bg-[#1a4a52] mb-5" />
             <h2 className="font-display text-[clamp(1.8rem,3vw,2.8rem)] font-semibold text-[#1a2a2e] leading-tight mb-5">One Studio.<br />Every Stage of Your Product Journey.</h2>
@@ -145,7 +147,7 @@ export default function HomePage() {
           <p className="text-[0.65rem] tracking-[0.25em] uppercase text-[#b8956a] font-semibold mb-3">What We Do</p>
           <div className="w-8 h-[2px] bg-[#1a4a52] mb-5" />
           <h2 className="font-display text-[clamp(2rem,3vw,2.8rem)] font-semibold text-[#1a2a2e] leading-tight mb-12">Our Services</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 fade-up">
             {services.map((s) => (
               <Link key={s.href} href={s.href} className="group bg-[#f7f5f2] hover:bg-[#1a4a52] rounded-xl p-7 transition-all duration-250 flex flex-col items-center text-center border border-[#eeeae4] hover:border-[#1a4a52] hover:shadow-md">
                 <div className="w-14 h-14 flex items-center justify-center mb-5 rounded-full bg-white group-hover:bg-white/10 transition-colors">
@@ -164,7 +166,7 @@ export default function HomePage() {
           <p className="text-[0.65rem] tracking-[0.25em] uppercase text-[#b8956a] font-semibold mb-3">Why Enrachna</p>
           <div className="w-8 h-[2px] bg-[#b8956a] mb-5" />
           <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold text-white leading-tight mb-12">The Integrated Advantage</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
             {whyPoints.map((w, i) => (
               <div key={i} className="p-7 bg-white/8 rounded-xl border border-white/12 hover:bg-white/12 transition-colors">
                 <div className="font-display text-[2.8rem] font-semibold leading-none text-[#b8956a]/30 mb-5">{w.n}</div>

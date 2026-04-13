@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Phone, Mail, Globe, MapPin } from "lucide-react";
 import Image from "next/image";
+import ScrollObserver from "@/components/ScrollObserver";
 
 export default function ContactPage() {
   const [sent, setSent] = useState(false);

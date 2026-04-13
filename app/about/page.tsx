@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ScrollObserver from "@/components/ScrollObserver";
 import { ArrowRight, Shield, Zap, Users, Star } from "lucide-react";
 
 export default function AboutPage() {
