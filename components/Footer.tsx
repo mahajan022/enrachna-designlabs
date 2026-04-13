@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.png" alt="Enrachna Design Labs" className="h-9 w-auto object-contain"/>
+              <img src="/logo.png" alt="Enrachna Design Labs" className="h-9 w-auto object-contain brightness-0 invert"/>
             </div>
             <p className="text-[0.82rem] leading-relaxed max-w-[220px] text-white/50">
               End-to-end product design and engineering — from the first sketch to the final launch.

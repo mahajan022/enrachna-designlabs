@@ -12,8 +12,8 @@ export default function Page() {
         <div className="max-w-7xl mx-auto relative z-10">
           <span className="text-[0.62rem] tracking-[0.28em] uppercase text-[#b8956a]/70 font-medium">Services</span>
           <div className="w-8 h-[2px] bg-[#b8956a]/40 mt-3 mb-5" />
-          <h1 className="font-display text-[clamp(2.2rem,4vw,3.6rem)] font-semibold text-white leading-[1.15] max-w-[620px]">Engineering That Ensures Your Product Performs</h1>
-          <p className="text-white/55 text-[1rem] leading-relaxed max-w-[500px] mt-5">Rigorous structural analysis, material selection, and DFM reviews that transform a design into a product ready for real-world conditions.</p>
+          <h1 className="font-display text-[clamp(2.2rem,4vw,3.6rem)] font-semibold text-white leading-[1.15] max-w-[620px]">Where Great Design Meets Reliable Engineering</h1>
+          <p className="text-white/55 text-[1rem] leading-relaxed max-w-[500px] mt-5">We bridge the gap between design intent and manufacturing reality — ensuring every component is structurally sound, material-optimised, and production-ready.</p>
         </div>
       </div>
       <section className="bg-white py-24 px-6 lg:px-10">
@@ -22,7 +22,7 @@ export default function Page() {
             <span className="text-[0.62rem] tracking-[0.28em] uppercase text-[#b8956a] font-medium">Overview</span>
             <div className="w-8 h-[2px] bg-[#1a4a52] mt-3 mb-5" />
             <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold text-[#1a2a2e] leading-tight mb-6">Product Engineering</h2>
-            <p className="text-[#5a6e74] text-[0.97rem] leading-relaxed mb-8">Beautiful design alone isn&apos;t enough — your product must also work reliably. Our product engineering service bridges the gap between design intent and manufacturable, testable reality. We apply rigorous analysis at every stage to ensure your product meets performance, safety, and cost targets.</p>
+            <p className="text-[#5a6e74] text-[0.97rem] leading-relaxed mb-8">Great products are built on great engineering. We validate every design decision — from material selection to tolerances — so your product works perfectly from day one. Our product engineering service ensures your design is not just beautiful, but structurally sound, manufacturable, and built to meet real-world performance and safety standards.</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#1a4a52] hover:bg-[#0f3038] text-white px-7 py-3.5 text-[0.88rem] font-medium transition-colors rounded-sm">Enquire About This Service <ArrowRight size={14} /></Link>
           </div>
           <div className="relative rounded-xl overflow-hidden fade-right">
