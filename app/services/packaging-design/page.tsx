@@ -44,7 +44,7 @@ export default function Page() {
             </ul>
           </div>
           <div className="rounded-xl overflow-hidden">
-            <Image src="/packaging-design-scope.jpeg" alt="Packaging Design scope" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
+            <Image src="/packaging-design-design.jpeg" alt="Packaging Design scope" width={800} height={600} className="w-full h-full object-cover rounded-xl" />
           </div>
         </div>
       </section>
