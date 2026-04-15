@@ -6,9 +6,54 @@ import ScrollObserver from "@/components/ScrollObserver";
 
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async () => {
+    setError("");
+    if (!formData.firstName || !formData.email || !formData.message) {
+      setError("Please fill in First Name, Email, and Message.");
+      return;
+    }
+    setSending(true);
+    try {
+      const res = await fetch("https://formspree.io/f/meeveezo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          "First Name": formData.firstName,
+          "Last Name": formData.lastName,
+          Email: formData.email,
+          Phone: formData.phone,
+          Message: formData.message,
+        }),
+      });
+      if (res.ok) {
+        setSent(true);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Network error. Please try again.");
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <>
+      <ScrollObserver />
       <div className="bg-[#0f2428] relative overflow-hidden px-6 lg:px-10 py-20">
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle, #b8956a 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
         <div className="max-w-7xl mx-auto relative z-10">
@@ -38,15 +83,57 @@ export default function ContactPage() {
             ) : (
               <div className="flex flex-col gap-5">
                 <div className="grid grid-cols-2 gap-5">
-                  <input type="text" placeholder="First Name" className="w-full border-b border-[#1a4a52]/25 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[1rem] outline-none transition-colors bg-transparent" />
-                  <input type="text" placeholder="Last Name" className="w-full border-b border-[#1a4a52]/25 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[1rem] outline-none transition-colors bg-transparent" />
+                  <input
+                    name="firstName"
+                    type="text"
+                    placeholder="First Name"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    className="w-full border-b border-[#1a4a52]/25 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[1rem] outline-none transition-colors bg-transparent"
+                  />
+                  <input
+                    name="lastName"
+                    type="text"
+                    placeholder="Last Name"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className="w-full border-b border-[#1a4a52]/25 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[1rem] outline-none transition-colors bg-transparent"
+                  />
                 </div>
                 <div className="grid grid-cols-2 gap-5">
-                  <input type="email" placeholder="Email" className="w-full border-b border-[#1a4a52]/25 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[1rem] outline-none transition-colors bg-transparent" />
-                  <input type="tel" placeholder="Phone" className="w-full border-b border-[#1a4a52]/25 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[1rem] outline-none transition-colors bg-transparent" />
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full border-b border-[#1a4a52]/25 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[1rem] outline-none transition-colors bg-transparent"
+                  />
+                  <input
+                    name="phone"
+                    type="tel"
+                    placeholder="Phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full border-b border-[#1a4a52]/25 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[1rem] outline-none transition-colors bg-transparent"
+                  />
                 </div>
-                <textarea placeholder="Tell us about your project" rows={4} className="w-full border-b border-[#1a4a52]/25 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[1rem] outline-none resize-none transition-colors bg-transparent" />
-                <button onClick={() => setSent(true)} className="mt-1 px-8 py-3.5 bg-[#1a4a52] text-white text-[1rem] font-medium hover:bg-[#0f3038] transition-colors rounded-sm w-fit">Submit</button>
+                <textarea
+                  name="message"
+                  placeholder="Tell us about your project"
+                  rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full border-b border-[#1a4a52]/25 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[1rem] outline-none resize-none transition-colors bg-transparent"
+                />
+                {error && <p className="text-red-500 text-[0.82rem]">{error}</p>}
+                <button
+                  onClick={handleSubmit}
+                  disabled={sending}
+                  className="mt-1 px-8 py-3.5 bg-[#1a4a52] text-white text-[1rem] font-medium hover:bg-[#0f3038] transition-colors rounded-sm w-fit disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {sending ? "Sending..." : "Submit"}
+                </button>
               </div>
             )}
           </div>

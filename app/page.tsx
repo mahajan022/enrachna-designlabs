@@ -47,7 +47,18 @@ const whyPoints = [
 export default function HomePage() {
   const [current, setCurrent] = useState(0);
   const [loaded, setLoaded] = useState<boolean[]>([false, false, false]);
+
+  // Form state
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
   const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
   const prev = useCallback(() => setCurrent((c) => (c - 1 + slides.length) % slides.length), []);
@@ -65,6 +76,41 @@ export default function HomePage() {
     });
   };
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async () => {
+    setError("");
+    if (!formData.firstName || !formData.email || !formData.message) {
+      setError("Please fill in First Name, Email, and Message.");
+      return;
+    }
+    setSending(true);
+    try {
+      const res = await fetch("https://formspree.io/f/meeveezo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          "First Name": formData.firstName,
+          "Last Name": formData.lastName,
+          Email: formData.email,
+          Phone: formData.phone,
+          Message: formData.message,
+        }),
+      });
+      if (res.ok) {
+        setSent(true);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Network error. Please try again.");
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <>
       <ScrollObserver />
@@ -75,7 +121,6 @@ export default function HomePage() {
             key={i}
             className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
           >
-            {/* Grey background shown until image loads */}
             <div className={`absolute inset-0 bg-[#1a2a2e] transition-opacity duration-500 ${loaded[i] ? "opacity-0" : "opacity-100"}`} />
             <Image
               src={s.img}
@@ -221,15 +266,57 @@ export default function HomePage() {
             ) : (
               <div className="flex flex-col gap-5">
                 <div className="grid grid-cols-2 gap-5">
-                  <input type="text" placeholder="First Name" className="w-full border-b border-[#1a4a52]/30 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[0.92rem] outline-none transition-colors bg-transparent" />
-                  <input type="text" placeholder="Last Name" className="w-full border-b border-[#1a4a52]/30 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[0.92rem] outline-none transition-colors bg-transparent" />
+                  <input
+                    name="firstName"
+                    type="text"
+                    placeholder="First Name"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    className="w-full border-b border-[#1a4a52]/30 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[0.92rem] outline-none transition-colors bg-transparent"
+                  />
+                  <input
+                    name="lastName"
+                    type="text"
+                    placeholder="Last Name"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className="w-full border-b border-[#1a4a52]/30 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[0.92rem] outline-none transition-colors bg-transparent"
+                  />
                 </div>
                 <div className="grid grid-cols-2 gap-5">
-                  <input type="email" placeholder="Email" className="w-full border-b border-[#1a4a52]/30 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[0.92rem] outline-none transition-colors bg-transparent" />
-                  <input type="tel" placeholder="Phone" className="w-full border-b border-[#1a4a52]/30 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[0.92rem] outline-none transition-colors bg-transparent" />
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full border-b border-[#1a4a52]/30 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[0.92rem] outline-none transition-colors bg-transparent"
+                  />
+                  <input
+                    name="phone"
+                    type="tel"
+                    placeholder="Phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full border-b border-[#1a4a52]/30 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[0.92rem] outline-none transition-colors bg-transparent"
+                  />
                 </div>
-                <textarea placeholder="Tell us about your project" rows={4} className="w-full border-b border-[#1a4a52]/30 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[0.92rem] outline-none resize-none transition-colors bg-transparent" />
-                <button onClick={() => setSent(true)} className="mt-1 px-8 py-3.5 bg-[#1a4a52] text-white text-[0.9rem] font-medium hover:bg-[#0f3038] transition-colors rounded-sm w-fit">Submit</button>
+                <textarea
+                  name="message"
+                  placeholder="Tell us about your project"
+                  rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full border-b border-[#1a4a52]/30 focus:border-[#1a4a52] text-[#1a2a2e] placeholder-[#5a6e74]/50 py-3 text-[0.92rem] outline-none resize-none transition-colors bg-transparent"
+                />
+                {error && <p className="text-red-500 text-[0.82rem]">{error}</p>}
+                <button
+                  onClick={handleSubmit}
+                  disabled={sending}
+                  className="mt-1 px-8 py-3.5 bg-[#1a4a52] text-white text-[0.9rem] font-medium hover:bg-[#0f3038] transition-colors rounded-sm w-fit disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {sending ? "Sending..." : "Submit"}
+                </button>
               </div>
             )}
           </div>
